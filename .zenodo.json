@@ -1,0 +1,24 @@
+{
+    "license": "MIT",
+    "title": "Reproducibility repository for Secure numerical simulations using fully homomorphic encryption",
+    "upload_type": "software",
+    "creators": [
+        {
+            "affiliation": "High-Performance Scientific Computing, University of Augsburg, Germany",
+            "name": "Kholod, Arseniy",
+            "orcid": "0009-0002-9457-4867"
+        },
+        {
+            "affiliation": "Duality Technologies, Inc., United States",
+            "name": "Polyakov, Yuriy",
+            "orcid": "0000-0002-5566-3763"
+        },
+        {
+            "affiliation": "High-Performance Scientific Computing, University of Augsburg, Germany",
+            "name": "Schlottke-Lakemper, Michael",
+            "orcid": "0000-0002-3195-2536"
+        }
+    ],
+    "access_right": "open"
+}
+
