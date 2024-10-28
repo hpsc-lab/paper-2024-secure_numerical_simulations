@@ -1,7 +1,7 @@
 # Secure numerical simulations using fully homomorphic encryption 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.TODO.svg)](https://doi.org/10.5281/zenodo.TODO)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14003844.svg)](https://doi.org/10.5281/zenodo.14003844)
 
 This repository contains information and code to reproduce the results presented in the
 article
@@ -27,7 +27,7 @@ use the implementations provided here, please **also** cite this repository as
   author={Kholod, Arseniy and Polyakov, Yuriy and Schlottke-Lakemper, Michael},
   year= {2024},
   howpublished={\url{https://github.com/hpsc-lab/paper-2024-secure_numerical_simulations}},
-  doi={10.5281/zenodo.TODO}
+  doi={10.5281/zenodo.14003844}
 }
 ```
 
