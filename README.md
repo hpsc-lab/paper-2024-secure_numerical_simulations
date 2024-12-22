@@ -34,23 +34,22 @@ use the implementations provided here, please **also** cite this repository as
 
 ## Abstract
 
-Data privacy is a significant concern in many environments today.
-This is particularly true if sensitive information, e.g.,  engineering, medical, or
-financial data, is to be processed on potentially insecure systems, as it is often the
-case in cloud computing. Fully homomorphic encryption (FHE) offers a potential solution
-to this problem, as it allows for secure computations on encrypted data. In this paper,
-we investigate the viability of using FHE for privacy-preserving numerical simulations of partial
-differential equations. We first give an overview of the CKKS scheme, a popular FHE
-method for computations with real numbers. This is followed by an introduction of our
-Julia packages OpenFHE.jl and SecureArithmetic.jl, which provide a Julia wrapper for the
-C++ library OpenFHE and offer a user-friendly interface for secure arithmetic
-operations. We then present a performance analysis of the CKKS scheme within OpenFHE,
-focusing on the error and efficiency of different FHE operations. Finally, we
-demonstrate the application of FHE to secure numerical simulations by implementing two
-finite difference schemes for the linear advection equation using the
-SecureArithmetic.jl package. Our results show that FHE can be used to perform
-cryptographically secure numerical simulations, but that the error and efficiency of FHE
-operations must be carefully considered when designing applications.
+Data privacy is a significant concern when using numerical simulations for sensitive information
+such as medical, financial, or engineering data.  This issue becomes especially relevant in
+untrusted environments like public cloud infrastructures. Fully homomorphic encryption (FHE) offers
+a promising solution for achieving data privacy by enabling secure computations directly on
+encrypted data. In this paper, aimed at computational scientists, we explore the viability of
+FHE-based, privacy-preserving numerical simulations of partial differential equations. We begin with
+an overview of the CKKS scheme, a widely used FHE method for computations with real numbers. Next,
+we introduce our Julia-based packages OpenFHE.jl and SecureArithmetic.jl, which wrap the OpenFHE
+C++ library and provide a convenient interface for secure arithmetic operations. We then evaluate
+the accuracy and performance of key FHE operations in OpenFHE as a baseline for more complex
+numerical algorithms. Following that, we demonstrate the application of FHE to scientific computing
+by implementing two finite difference schemes for the linear advection equation.  Finally, we
+discuss potential challenges and solutions for extending secure numerical simulations to other
+models and methods.  Our results show that cryptographically secure numerical simulations are
+possible, but that careful consideration must be given to the computational overhead and the
+numerical errors introduced by using FHE.
 
 
 ## Numerical experiments
