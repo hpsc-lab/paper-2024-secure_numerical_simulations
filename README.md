@@ -11,8 +11,8 @@ article
   author={Kholod, Arseniy and Polyakov, Yuriy and Schlottke-Lakemper, Michael},
   year={2023},
   month={11},
-  doi={10.48550/arXiv.TODO},
-  eprint={TODO},
+  doi={10.48550/arXiv.2410.21824},
+  eprint={2410.21824},
   eprinttype={arxiv},
   eprintclass={math.NA}
 }
