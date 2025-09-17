@@ -359,9 +359,9 @@ version = "0.1.8"
 
 [[deps.JLLWrappers]]
 deps = ["Artifacts", "Preferences"]
-git-tree-sha1 = "f389674c99bfcde17dc57454011aa44d5a260a40"
+git-tree-sha1 = "0533e564aae234aff59ab625543145446d8b6ec2"
 uuid = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"
-version = "1.6.0"
+version = "1.7.1"
 
 [[deps.JSON]]
 deps = ["Dates", "Mmap", "Parsers", "Unicode"]
@@ -613,16 +613,22 @@ uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
 version = "0.3.23+4"
 
 [[deps.OpenFHE]]
-deps = ["CxxWrap", "Preferences", "UUIDs", "openfhe_julia_jll"]
-git-tree-sha1 = "ecad13e79c99d62915fa988b1f2aef0432f96200"
+deps = ["CxxWrap", "Preferences", "UUIDs", "openfhe_julia_int128_jll", "openfhe_julia_jll"]
+git-tree-sha1 = "65311acbd9422d1c97b6358173ce96f1463a1fff"
 uuid = "77ce9b8e-ecf5-45d1-bd8a-d31f384f2f95"
-version = "0.1.11"
+version = "0.1.13"
+
+[[deps.OpenFHE_int128_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "LLVMOpenMP_jll", "Libdl"]
+git-tree-sha1 = "319de8cd5c14515281bf2ef6e0b99017028c60b7"
+uuid = "a89a0bdd-1663-5679-8b21-c3a5388322bc"
+version = "1.2.4+0"
 
 [[deps.OpenFHE_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "LLVMOpenMP_jll", "Libdl"]
-git-tree-sha1 = "0c3e9ce4dcbf29b05239d79edaf547e139240e06"
+git-tree-sha1 = "3cad0a5f433aedc94b1dae5ba79284f41ebcfd5d"
 uuid = "a2687184-f17b-54bc-b2bb-b849352af807"
-version = "1.2.0+0"
+version = "1.2.3+1"
 
 [[deps.OpenLibm_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -1266,11 +1272,17 @@ deps = ["Artifacts", "Libdl"]
 uuid = "8e850ede-7688-5339-a07c-302acd2aaf8d"
 version = "1.52.0+1"
 
+[[deps.openfhe_julia_int128_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "LLVMOpenMP_jll", "Libdl", "OpenFHE_int128_jll", "libcxxwrap_julia_jll"]
+git-tree-sha1 = "6572399ffee6ddf37d4f75da96ae6f7682819b6a"
+uuid = "328aa5c7-aa14-5b23-aa57-05fb7d04b830"
+version = "0.3.11+0"
+
 [[deps.openfhe_julia_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "LLVMOpenMP_jll", "Libdl", "OpenFHE_jll", "libcxxwrap_julia_jll"]
-git-tree-sha1 = "ca96f3a7820c32d1e5f1a0eb04c9202ce803ef7b"
+git-tree-sha1 = "ca9d3eca685f21b77b52e7fc4c34e9656f5d6811"
 uuid = "e5e97983-1b8c-50fe-92b7-0e05c8c202e2"
-version = "0.3.4+0"
+version = "0.3.11+0"
 
 [[deps.p7zip_jll]]
 deps = ["Artifacts", "Libdl"]

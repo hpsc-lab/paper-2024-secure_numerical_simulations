@@ -72,13 +72,13 @@ table = CSV.read("out/efficiency/bootstrapping.csv", DataFrame)
 # double bootstrapping
 table_double = CSV.read("out/efficiency/double_bootstrapping.csv", DataFrame)
 # error
-ticks = [1.0e-10,1.0e-9,1.0e-8,1.0e-7,1.0e-6,1.0e-5]
-ticks_Latex = ["10"*sup(-10),"10"*sup(-9),"10"*sup(-8),"10"*sup(-7),"10"*sup(-6),"10"*sup(-5)]
-ticks_bits = [2^(-32),2^(-28),2^(-24),2^(-20),2^(-16)]
+ticks = [1.0e-10,1.0e-9,1.0e-8,1.0e-7,1.0e-6,1.0e-5,1.0e-4,1.0e-3]
+ticks_Latex = ["10"*sup(-10),"10"*sup(-9),"10"*sup(-8),"10"*sup(-7),"10"*sup(-6),"10"*sup(-5),"10"*sup(-4),"10"*sup(-3)]
+ticks_bits = [2^(-32),2^(-28),2^(-24),2^(-20),2^(-16),2^(-12)]
 p1 = plot(table.N_boots, [table.error table_double.error], label = ["Standard bootstrapping" "Iterative bootstrapping"],
           xaxis="Number of bootstrapping operations",
           yaxis=:log2,
-          ylims=(2^(-35), 2^(-14)),
+          ylims=(2^(-34), 2^(-9)),
           yticks = ticks,
           size = my_size,
           linewidth = my_linewidth,
@@ -86,11 +86,11 @@ p1 = plot(table.N_boots, [table.error table_double.error], label = ["Standard bo
           gridlinewidth = my_gridlinewidth,
           palette = my_palette,
           linestyle = my_linestyle,
-         )
+          );
 ylabel!(L"L^\infty"*" error")
 yticks!(ticks, ticks_Latex)
 plot!(twinx(), table.N_boots, fill(NaN, length(table.error)), label="",
-      ylims=(2^(-35), 2^(-14)),
+      ylims=(2^(-34), 2^(-9)),
       yaxis=(:log2, "Precision [bits]"),
       yticks=(ticks_bits, string.(Int.(round.(-log2.(ticks_bits))))),
       size = my_size,
@@ -99,7 +99,7 @@ plot!(twinx(), table.N_boots, fill(NaN, length(table.error)), label="",
       gridlinewidth = my_gridlinewidth,
       gridcolor = :white,
       palette = my_palette,
-      linestyle = my_linestyle,)
+      linestyle = my_linestyle,);
 ygrid!(true)
 savefig(p1, "out/efficiency/bootstrapping_error.pdf")
 # time
