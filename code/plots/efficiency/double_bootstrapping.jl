@@ -17,6 +17,7 @@ error_bootstrap = zeros(mult_depth)
 for i in range(1, mult_depth)
     res.data = OpenFHE.EvalBootstrap(SecureArithmetic.get_crypto_context(context), res.data, 2, 19)
     error_bootstrap[i] = maximum(abs.(collect(decrypt(res, private_key)).-u_sin))
+    res.data = Compress(context.backend.crypto_context, res.data, 2)
 end
 release_context_memory()
 GC.gc()
