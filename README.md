@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14003844.svg)](https://doi.org/10.5281/zenodo.14003844)
+[![arXiv:2410.21824](https://img.shields.io/badge/arXiv-2410.21824-yellow)](https://arxiv.org/abs/2410.21824)
 
 This repository contains information and code to reproduce the results presented in the
 article
@@ -34,22 +35,25 @@ use the implementations provided here, please **also** cite this repository as
 
 ## Abstract
 
-Data privacy is a significant concern when using numerical simulations for sensitive information
-such as medical, financial, or engineering data.  This issue becomes especially relevant in
-untrusted environments like public cloud infrastructures. Fully homomorphic encryption (FHE) offers
-a promising solution for achieving data privacy by enabling secure computations directly on
-encrypted data. In this paper, aimed at computational scientists, we explore the viability of
-FHE-based, privacy-preserving numerical simulations of partial differential equations. We begin with
-an overview of the CKKS scheme, a widely used FHE method for computations with real numbers. Next,
-we introduce our Julia-based packages OpenFHE.jl and SecureArithmetic.jl, which wrap the OpenFHE
-C++ library and provide a convenient interface for secure arithmetic operations. We then evaluate
-the accuracy and performance of key FHE operations in OpenFHE as a baseline for more complex
-numerical algorithms. Following that, we demonstrate the application of FHE to scientific computing
-by implementing two finite difference schemes for the linear advection equation.  Finally, we
-discuss potential challenges and solutions for extending secure numerical simulations to other
-models and methods.  Our results show that cryptographically secure numerical simulations are
-possible, but that careful consideration must be given to the computational overhead and the
-numerical errors introduced by using FHE.
+Data privacy is a significant concern when using numerical simulations for sensitive
+information such as medical, financial, or engineering data---especially in untrusted
+environments like public cloud infrastructures. Fully homomorphic encryption (FHE) offers a
+promising solution for achieving data privacy by enabling secure computations directly on
+encrypted data. Aimed at computational scientists, this work explores the viability of
+FHE-based, privacy-preserving numerical simulations of partial differential equations. The
+presented approach utilizes the CKKS scheme, a widely used FHE method for approximate
+arithmetic on real numbers. Two Julia packages are introduced, OpenFHE.jl and
+SecureArithmetic.jl, which wrap the OpenFHE C++ library to provide a convenient interface
+for secure arithmetic operations. With these tools, the accuracy and performance of key FHE
+operations in OpenFHE are evaluated, and implementations of finite difference
+schemes for solving the linear advection equation with encrypted data are demonstrated. The
+results show that cryptographically secure numerical simulations are possible, but that
+careful consideration must be given to the computational overhead and the numerical errors
+introduced by using FHE. An analysis of the algorithmic restrictions imposed by FHE
+highlights potential challenges and solutions for extending the approach to other models and
+methods. While it remains uncertain how broadly the approach can be generalized to more complex
+algorithms due to CKKS limitations, these findings lay the groundwork for further research on
+privacy-preserving scientific computing.
 
 
 ## Numerical experiments
