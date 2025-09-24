@@ -3,16 +3,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14003844.svg)](https://doi.org/10.5281/zenodo.14003844)
 [![arXiv:2410.21824](https://img.shields.io/badge/arXiv-2410.21824-yellow)](https://arxiv.org/abs/2410.21824)
+[![doi:10.1016/j.cpc.2025.109868](https://img.shields.io/badge/Paper_DOI-10.1016/j.cpc.2025.109868-blue)](https://doi.org/10.1016/j.cpc.2025.109868)
 
 This repository contains information and code to reproduce the results presented in the
 article
 ```bibtex
-@online{kholod2024secure,
+@article{kholod2026secure,
   title={{S}ecure numerical simulations using fully homomorphic encryption},
-  author={Kholod, Arseniy and Polyakov, Yuriy and Schlottke-Lakemper, Michael},
-  year={2024},
-  month={10},
-  doi={10.48550/arXiv.2410.21824},
+  author={Arseniy Kholod and Yuriy Polyakov and Michael Schlottke-Lakemper},
+  journal = {Computer Physics Communications},
+  volume = {318},
+  pages = {109868},
+  year={2026},
+  doi={10.1016/j.cpc.2025.109868},
   eprint={2410.21824},
   eprinttype={arxiv},
   eprintclass={math.NA}
@@ -41,7 +44,7 @@ environments like public cloud infrastructures. Fully homomorphic encryption (FH
 promising solution for achieving data privacy by enabling secure computations directly on
 encrypted data. Aimed at computational scientists, this work explores the viability of
 FHE-based, privacy-preserving numerical simulations of partial differential equations. The
-presented approach utilizes the CKKS scheme, a widely used FHE method for approximate
+presented approach utilizes the Cheon-Kim-Kim-Song (CKKS) scheme, a widely used FHE method for approximate
 arithmetic on real numbers. Two Julia packages are introduced, OpenFHE.jl and
 SecureArithmetic.jl, which wrap the OpenFHE C++ library to provide a convenient interface
 for secure arithmetic operations. With these tools, the accuracy and performance of key FHE
